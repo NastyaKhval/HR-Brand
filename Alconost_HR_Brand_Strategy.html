@@ -1,0 +1,1457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alconost — HR Brand Strategy: 3-Month Roadmap</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+        :root {
+            --primary: #2D5BFF;
+            --primary-light: #EEF2FF;
+            --primary-dark: #1a3a99;
+            --accent: #FF6B35;
+            --accent-light: #FFF4EF;
+            --dark: #0F172A;
+            --gray-900: #1E293B;
+            --gray-700: #334155;
+            --gray-500: #64748B;
+            --gray-300: #CBD5E1;
+            --gray-100: #F1F5F9;
+            --white: #FFFFFF;
+            --success: #10B981;
+            --success-light: #ECFDF5;
+            --warning: #F59E0B;
+            --warning-light: #FFFBEB;
+            --purple: #8B5CF6;
+            --purple-light: #F5F3FF;
+            --teal: #14B8A6;
+            --teal-light: #F0FDFA;
+            --rose: #F43F5E;
+            --rose-light: #FFF1F2;
+            --month1: #2D5BFF;
+            --month2: #8B5CF6;
+            --month3: #FF6B35;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--gray-100);
+            color: var(--gray-900);
+            line-height: 1.6;
+        }
+
+        /* ── Hero ── */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, #6366F1 50%, var(--purple) 100%);
+            color: white;
+            padding: 80px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 50%;
+        }
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 40px;
+            position: relative;
+            z-index: 1;
+        }
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            margin-bottom: 24px;
+        }
+        .hero h1 {
+            font-size: 44px;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+        .hero p {
+            font-size: 18px;
+            opacity: 0.85;
+            max-width: 600px;
+            line-height: 1.7;
+        }
+        .hero-meta {
+            margin-top: 32px;
+            display: flex;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+        .hero-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            opacity: 0.75;
+        }
+
+        /* ── Container ── */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* ── Table of Contents ── */
+        .toc {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 40px;
+            margin-top: -50px;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            margin-bottom: 48px;
+        }
+        .toc h2 {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--gray-500);
+            margin-bottom: 20px;
+        }
+        .toc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+        .toc-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: var(--gray-700);
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        .toc-item:hover {
+            background: var(--primary-light);
+            color: var(--primary);
+        }
+        .toc-num {
+            width: 28px;
+            height: 28px;
+            border-radius: 8px;
+            background: var(--gray-100);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--primary);
+            flex-shrink: 0;
+        }
+
+        /* ── Section ── */
+        .section {
+            margin-bottom: 48px;
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .section-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            flex-shrink: 0;
+            font-weight: 800;
+            color: white;
+        }
+        .section-icon.blue { background: var(--primary); }
+        .section-icon.orange { background: var(--accent); }
+        .section-icon.green { background: var(--success); }
+        .section-icon.purple { background: var(--purple); }
+        .section-icon.teal { background: var(--teal); }
+        .section-icon.rose { background: var(--rose); }
+        .section-icon.warning { background: var(--warning); }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--dark);
+            letter-spacing: -0.5px;
+        }
+        .section-subtitle {
+            font-size: 14px;
+            color: var(--gray-500);
+            font-weight: 400;
+        }
+
+        /* ── Card ── */
+        .card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+            border: 1px solid rgba(0,0,0,0.04);
+            margin-bottom: 16px;
+        }
+        .card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--dark);
+        }
+        .card p, .card li {
+            color: var(--gray-700);
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        /* ── Highlight box ── */
+        .highlight-box {
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 16px;
+            color: white;
+        }
+        .highlight-box.month1 { background: linear-gradient(135deg, var(--month1) 0%, #6366F1 100%); }
+        .highlight-box.month2 { background: linear-gradient(135deg, var(--month2) 0%, #a78bfa 100%); }
+        .highlight-box.month3 { background: linear-gradient(135deg, var(--month3) 0%, #fb923c 100%); }
+        .highlight-box h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .highlight-box p {
+            opacity: 0.9;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        .highlight-box .tagline {
+            font-size: 26px;
+            font-weight: 800;
+            margin: 16px 0;
+            letter-spacing: -0.5px;
+        }
+
+        /* ── Pillar cards grid ── */
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        .pillar-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+            border: 1px solid rgba(0,0,0,0.04);
+            border-top: 4px solid;
+        }
+        .pillar-card.c1 { border-top-color: var(--primary); }
+        .pillar-card.c2 { border-top-color: var(--accent); }
+        .pillar-card.c3 { border-top-color: var(--success); }
+        .pillar-card.c4 { border-top-color: var(--purple); }
+        .pillar-card.c5 { border-top-color: var(--teal); }
+        .pillar-card.c6 { border-top-color: var(--rose); }
+
+        .pillar-card h4 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--dark);
+        }
+        .pillar-card p, .pillar-card li {
+            font-size: 14px;
+            color: var(--gray-500);
+            line-height: 1.6;
+        }
+        .pillar-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        .pillar-card ul li {
+            padding: 4px 0 4px 20px;
+            position: relative;
+        }
+        .pillar-card ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 11px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--gray-300);
+        }
+
+        /* ── Three column grid ── */
+        .three-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 16px;
+        }
+
+        /* ── Channel table ── */
+        .channel-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+            border: 1px solid rgba(0,0,0,0.04);
+        }
+        .channel-table thead th {
+            background: var(--gray-100);
+            padding: 14px 20px;
+            text-align: left;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--gray-500);
+        }
+        .channel-table tbody td {
+            padding: 16px 20px;
+            font-size: 14px;
+            color: var(--gray-700);
+            border-top: 1px solid var(--gray-100);
+        }
+        .channel-table tbody tr:hover {
+            background: var(--gray-100);
+        }
+
+        /* ── Metrics ── */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+        .metric-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+            border: 1px solid rgba(0,0,0,0.04);
+        }
+        .metric-value {
+            font-size: 36px;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+        .metric-value.blue { color: var(--primary); }
+        .metric-value.purple { color: var(--purple); }
+        .metric-value.green { color: var(--success); }
+        .metric-value.orange { color: var(--accent); }
+        .metric-value.teal { color: var(--teal); }
+        .metric-value.rose { color: var(--rose); }
+        .metric-label {
+            font-size: 13px;
+            color: var(--gray-500);
+            margin-top: 4px;
+            font-weight: 500;
+        }
+        .metric-sub {
+            font-size: 12px;
+            color: var(--gray-300);
+            margin-top: 2px;
+        }
+
+        /* ── Timeline ── */
+        .timeline {
+            position: relative;
+            padding-left: 32px;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 11px;
+            top: 8px;
+            bottom: 8px;
+            width: 2px;
+            background: var(--gray-300);
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 28px;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -27px;
+            top: 6px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: 3px solid var(--primary);
+            background: white;
+        }
+        .timeline-item.m1::before { border-color: var(--month1); }
+        .timeline-item.m2::before { border-color: var(--month2); }
+        .timeline-item.m3::before { border-color: var(--month3); }
+        .timeline-item h4 {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 4px;
+        }
+        .timeline-item .tl-period {
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        .timeline-item.m1 .tl-period { color: var(--month1); }
+        .timeline-item.m2 .tl-period { color: var(--month2); }
+        .timeline-item.m3 .tl-period { color: var(--month3); }
+        .timeline-item p, .timeline-item li {
+            font-size: 14px;
+            color: var(--gray-500);
+            line-height: 1.6;
+        }
+
+        /* ── Lists ── */
+        .styled-list {
+            list-style: none;
+            padding: 0;
+        }
+        .styled-list li {
+            padding: 6px 0 6px 24px;
+            position: relative;
+            font-size: 15px;
+            color: var(--gray-700);
+        }
+        .styled-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 13px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--primary);
+        }
+
+        /* ── Quote ── */
+        .quote-block {
+            background: var(--primary-light);
+            border-left: 4px solid var(--primary);
+            border-radius: 0 12px 12px 0;
+            padding: 24px 28px;
+            margin: 20px 0;
+        }
+        .quote-block p {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--primary-dark);
+            font-style: italic;
+        }
+
+        /* ── Podcast card ── */
+        .podcast-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 24px 28px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+            border: 1px solid rgba(0,0,0,0.04);
+            margin-bottom: 12px;
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        .podcast-num {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: var(--purple-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--purple);
+            flex-shrink: 0;
+        }
+        .podcast-body h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 4px;
+        }
+        .podcast-body p {
+            font-size: 14px;
+            color: var(--gray-500);
+            line-height: 1.6;
+        }
+
+        /* ── Badge / tag ── */
+        .tag {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .tag-blue { background: var(--primary-light); color: var(--primary); }
+        .tag-purple { background: var(--purple-light); color: var(--purple); }
+        .tag-orange { background: var(--accent-light); color: var(--accent); }
+        .tag-green { background: var(--success-light); color: var(--success); }
+
+        /* ── Weekly routine ── */
+        .routine-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        .routine-item {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 20px 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+            border: 1px solid rgba(0,0,0,0.04);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .routine-hours {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary);
+            flex-shrink: 0;
+            min-width: 50px;
+            text-align: center;
+        }
+        .routine-hours span {
+            display: block;
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--gray-500);
+            text-transform: uppercase;
+        }
+        .routine-desc {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gray-700);
+        }
+
+        /* ── Checklist ── */
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+        .checklist li {
+            padding: 8px 0 8px 32px;
+            position: relative;
+            font-size: 15px;
+            color: var(--gray-700);
+            line-height: 1.6;
+        }
+        .checklist li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 20px;
+            height: 20px;
+            border-radius: 6px;
+            background: var(--success-light);
+            color: var(--success);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        /* ── Divider ── */
+        .divider {
+            height: 1px;
+            background: var(--gray-300);
+            margin: 16px 0;
+        }
+
+        /* ── Footer ── */
+        .footer {
+            text-align: center;
+            padding: 48px 0;
+            color: var(--gray-500);
+            font-size: 13px;
+        }
+        .footer strong {
+            color: var(--gray-700);
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 30px; }
+            .pillars-grid, .toc-grid, .routine-grid { grid-template-columns: 1fr; }
+            .three-grid { grid-template-columns: 1fr; }
+            .metrics-grid { grid-template-columns: 1fr; }
+            .container { padding: 0 20px; }
+            .podcast-card { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-badge">STRATEGIC DOCUMENT</div>
+        <h1>HR Brand Strategy<br>Alconost &mdash; 3-Month Roadmap</h1>
+        <p>The complete employer branding strategy: from cultural code to external publications. A realistic plan built for 10 hours per week.</p>
+        <div class="hero-meta">
+            <div class="hero-meta-item">
+                <span>Prepared: January 2026</span>
+            </div>
+            <div class="hero-meta-item">
+                <span>Department: People & Culture</span>
+            </div>
+            <div class="hero-meta-item">
+                <span>Budget: 10 hrs/week</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+
+<!-- ═══════════════ TOC ═══════════════ -->
+<nav class="toc">
+    <h2>Table of Contents</h2>
+    <div class="toc-grid">
+        <a href="#s0" class="toc-item"><span class="toc-num">00</span> What We Already Have (Strengths)</a>
+        <a href="#s1" class="toc-item"><span class="toc-num">01</span> Month 1: Cultural Code</a>
+        <a href="#s2" class="toc-item"><span class="toc-num">02</span> Month 2: Internal Launch</a>
+        <a href="#s3" class="toc-item"><span class="toc-num">03</span> Month 3: Vacancies & Scale</a>
+        <a href="#s4" class="toc-item"><span class="toc-num">04</span> Weekly Routine</a>
+        <a href="#s5" class="toc-item"><span class="toc-num">05</span> Expected Results</a>
+        <a href="#s6" class="toc-item"><span class="toc-num">06</span> Roadmap</a>
+        <a href="#s7" class="toc-item"><span class="toc-num">07</span> What&rsquo;s Next (After 3 Months)</a>
+    </div>
+</nav>
+
+<!-- ═══════════════ SECTION 0: ЧТО УЖЕ ЕСТЬ ═══════════════ -->
+<section class="section" id="s0">
+    <div class="section-header">
+        <div class="section-icon green">00</div>
+        <div>
+            <div class="section-title">What We Already Have</div>
+            <div class="section-subtitle">Strengths we are building on</div>
+        </div>
+    </div>
+
+    <div class="pillars-grid">
+        <div class="pillar-card c3">
+            <h4>Real Culture</h4>
+            <p>Teal organization, remote work, freedom &mdash; this is already our reality, not a slogan. We just need to package it.</p>
+        </div>
+        <div class="pillar-card c1">
+            <h4>Strong People Inside</h4>
+            <p>A team with compelling stories. A CEO with vision. Employees with experience across countries and industries.</p>
+        </div>
+        <div class="pillar-card c4">
+            <h4>Product & Mission</h4>
+            <p>Localization &mdash; a meaningful industry. We help products reach the global market. 120+ languages.</p>
+        </div>
+        <div class="pillar-card c2">
+            <h4>Global Team</h4>
+            <p>20+ countries, English as the working language, multicultural environment &mdash; a competitive advantage.</p>
+        </div>
+    </div>
+
+    <div class="quote-block" style="margin-top: 16px;">
+        <p>Our task: not to invent &mdash; but to extract, package, and show what already exists inside the company.</p>
+    </div>
+</section>
+
+<!-- ═══════════════ MONTH 1 ═══════════════ -->
+<section class="section" id="s1">
+    <div class="section-header">
+        <div class="section-icon blue">01</div>
+        <div>
+            <div class="section-title">Month 1: Cultural Code</div>
+            <div class="section-subtitle">Building the HR brand foundation</div>
+        </div>
+    </div>
+
+    <div class="highlight-box month1">
+        <h3>Goal of the Month</h3>
+        <div class="tagline">Form the company&rsquo;s Cultural Code</div>
+        <p>CEO interview, candidate persona, EVP formulations, Story Bank &mdash; everything that will serve as the foundation for content and positioning.</p>
+    </div>
+
+    <!-- 1.1 CEO Interview -->
+    <div class="card">
+        <h3>1.1 Deep-Dive CEO Interview</h3>
+        <p style="margin-bottom: 16px;">The key source of the cultural code. Format: 60&ndash;90 minutes, recorded interview.</p>
+
+        <div class="pillars-grid" style="margin-top: 12px;">
+            <div class="pillar-card c1">
+                <h4>About the Founding</h4>
+                <ul>
+                    <li>Why did you start Alconost?</li>
+                    <li>What did you want to do differently?</li>
+                    <li>How did you choose the teal model?</li>
+                </ul>
+            </div>
+            <div class="pillar-card c4">
+                <h4>About the Culture</h4>
+                <ul>
+                    <li>What kind of person thrives here?</li>
+                    <li>What qualities are unacceptable?</li>
+                    <li>How do you tell &ldquo;our person / not our person&rdquo;?</li>
+                </ul>
+            </div>
+            <div class="pillar-card c3">
+                <h4>About Ambitions</h4>
+                <ul>
+                    <li>Where is Alconost heading in 3 years?</li>
+                    <li>What inspires you today?</li>
+                    <li>What challenges lie ahead?</li>
+                </ul>
+            </div>
+            <div class="pillar-card c2">
+                <h4>About the People</h4>
+                <ul>
+                    <li>Who on the team do you consider a role model?</li>
+                    <li>Is there an &ldquo;Alconost type&rdquo; of person?</li>
+                    <li>What do employees say unofficially?</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="quote-block">
+            <p>Output: transcript &rarr; key quotes &rarr; foundation for EVP, stories, and content.</p>
+        </div>
+    </div>
+
+    <!-- 1.2 Candidate Persona -->
+    <div class="card">
+        <h3>1.2 Ideal Candidate Profile (Candidate Persona)</h3>
+        <p>A document defining &ldquo;who we&rsquo;re looking for&rdquo; &mdash; not by hard skills, but by mindset and cultural fit.</p>
+
+        <table class="channel-table" style="margin-top: 16px;">
+            <thead>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Mindset</strong></td>
+                    <td>Autonomous, entrepreneurial, comfortable with ambiguity</td>
+                </tr>
+                <tr>
+                    <td><strong>Motivation</strong></td>
+                    <td>Wants to build, not maintain. Wants impact, not stability</td>
+                </tr>
+                <tr>
+                    <td><strong>Cultural Fit</strong></td>
+                    <td>Values freedom, ready for responsibility. Not looking for a corporate ladder</td>
+                </tr>
+                <tr>
+                    <td><strong>Red Flags</strong></td>
+                    <td>Needs constant supervision, seeks a &ldquo;prestigious brand name&rdquo;, not ready for async communication</td>
+                </tr>
+                <tr>
+                    <td><strong>Where They Live</strong></td>
+                    <td>LinkedIn, startup communities, remote-work platforms, tech meetups</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 1.3 EVP -->
+    <div class="card">
+        <h3>1.3 EVP &mdash; Employee Value Proposition</h3>
+        <p style="margin-bottom: 16px;">Key formulations of the value of working at Alconost, organized into 4 pillars:</p>
+
+        <div class="pillars-grid">
+            <div class="pillar-card c1">
+                <h4>Impact & Ownership</h4>
+                <p>&ldquo;You&rsquo;re not joining a team &mdash; you&rsquo;re building the market. Your deals = company growth.&rdquo;</p>
+            </div>
+            <div class="pillar-card c2">
+                <h4>Freedom & Trust</h4>
+                <p>&ldquo;Remote. Flexible schedule. Teal structure. We hire adults and treat them like adults.&rdquo;</p>
+            </div>
+            <div class="pillar-card c3">
+                <h4>Growth & Learning</h4>
+                <p>&ldquo;AI tools, cross-functional experience, international environment. You grow faster than in a corporation.&rdquo;</p>
+            </div>
+            <div class="pillar-card c4">
+                <h4>Global Community</h4>
+                <p>&ldquo;20+ countries on the team. English every day. Multicultural experience is our norm.&rdquo;</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 1.4 Story Bank -->
+    <div class="card">
+        <h3>1.4 Story Bank</h3>
+        <p style="margin-bottom: 16px;">Collected real employee stories &mdash; the foundation for all future content.</p>
+
+        <div class="three-grid">
+            <div class="pillar-card c1" style="grid-column: auto;">
+                <h4>Sources</h4>
+                <ul>
+                    <li>CEO interview</li>
+                    <li>Mini-interviews with 3&ndash;5 employees</li>
+                    <li>Quotes from Slack / internal channels</li>
+                    <li>Onboarding stories</li>
+                </ul>
+            </div>
+            <div class="pillar-card c4" style="grid-column: auto;">
+                <h4>Story Formats</h4>
+                <ul>
+                    <li>&ldquo;Why I chose Alconost&rdquo;</li>
+                    <li>&ldquo;My typical day&rdquo;</li>
+                    <li>&ldquo;What surprised me&rdquo;</li>
+                    <li>&ldquo;My growth in N months&rdquo;</li>
+                </ul>
+            </div>
+            <div class="pillar-card c3" style="grid-column: auto;">
+                <h4>Usage</h4>
+                <ul>
+                    <li>LinkedIn posts</li>
+                    <li>Careers page</li>
+                    <li>Podcast episodes</li>
+                    <li>Job descriptions</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Month 1 deliverables -->
+    <div class="card" style="background: var(--primary-light); border: 1px solid rgba(45,91,255,0.15);">
+        <h3 style="color: var(--primary);">Month 1 Deliverables</h3>
+        <ul class="checklist">
+            <li>CEO interview transcript + key quotes extracted</li>
+            <li>Ideal Candidate Profile document</li>
+            <li>EVP formulations (4 pillars)</li>
+            <li>Story Bank (minimum 10 stories/quotes)</li>
+            <li>Company Cultural Code (1-page summary)</li>
+        </ul>
+    </div>
+</section>
+
+<!-- ═══════════════ MONTH 2 ═══════════════ -->
+<section class="section" id="s2">
+    <div class="section-header">
+        <div class="section-icon purple">02</div>
+        <div>
+            <div class="section-title">Month 2: Internal Launch</div>
+            <div class="section-subtitle">Culture Talks podcast, social media, Glassdoor</div>
+        </div>
+    </div>
+
+    <div class="highlight-box month2">
+        <h3>Goal of the Month</h3>
+        <div class="tagline">Launch Culture Talks podcast + social media</div>
+        <p>Internal podcast (4 episodes), social media toolkit for employees, first Glassdoor reviews. From foundation &mdash; to content.</p>
+    </div>
+
+    <!-- Podcast -->
+    <div class="card">
+        <h3>Culture Talks &mdash; Internal Podcast</h3>
+        <p style="margin-bottom: 8px;">Format: audio/video 15&ndash;20 minutes. 4 episodes per month. Each with a specific focus.</p>
+        <p style="margin-bottom: 20px; font-size: 14px; color: var(--gray-500);">Can be recorded via Zoom/Riverside &mdash; minimal production overhead.</p>
+    </div>
+
+    <div class="podcast-card">
+        <div class="podcast-num">01</div>
+        <div class="podcast-body">
+            <h4>CEO: Why Alconost Is Built the Way It Is</h4>
+            <p>The founder talks about the teal model, company history, and management philosophy. Best moments from the Month 1 interview + additional questions.</p>
+        </div>
+    </div>
+
+    <div class="podcast-card">
+        <div class="podcast-num">02</div>
+        <div class="podcast-body">
+            <h4>Employee: How to Work Remotely Without Losing Your Mind</h4>
+            <p>Remote-work hacks, routines, balance. Real experience firsthand. Showing that remote work is a conscious choice, not a forced measure.</p>
+        </div>
+    </div>
+
+    <div class="podcast-card">
+        <div class="podcast-num">03</div>
+        <div class="podcast-body">
+            <h4>Team: What Teal Means in Practice</h4>
+            <p>2&ndash;3 people discuss how decisions are made, what &ldquo;no boss&rdquo; really means, and the challenges and advantages of self-management.</p>
+        </div>
+    </div>
+
+    <div class="podcast-card">
+        <div class="podcast-num">04</div>
+        <div class="podcast-body">
+            <h4>Newcomer: First 90 Days at Alconost</h4>
+            <p>An onboarding story. What surprised them, what was hard, what helped. The episode you can show to candidates.</p>
+        </div>
+    </div>
+
+    <!-- Social toolkit -->
+    <div class="card">
+        <h3>Social Media Toolkit for Employees</h3>
+        <p style="margin-bottom: 16px;">A set of materials so employees can easily share content on their social media:</p>
+
+        <div class="pillars-grid">
+            <div class="pillar-card c5">
+                <h4>What&rsquo;s Included</h4>
+                <ul>
+                    <li>LinkedIn post templates</li>
+                    <li>Ready-made company descriptions</li>
+                    <li>Visual templates (Canva)</li>
+                    <li>Guide: &ldquo;How to talk about your work&rdquo;</li>
+                </ul>
+            </div>
+            <div class="pillar-card c6">
+                <h4>How to Motivate</h4>
+                <ul>
+                    <li>Lead by example from CEO and HR</li>
+                    <li>Support: &ldquo;We&rsquo;ll help you write it&rdquo;</li>
+                    <li>Internal recognition of active participants</li>
+                    <li>No pressure &mdash; only inspiration</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Glassdoor -->
+    <div class="card">
+        <h3>Glassdoor: First Reviews</h3>
+        <p>Ask 3&ndash;5 loyal employees to leave honest reviews on Glassdoor. Not scripted &mdash; just suggested topics:</p>
+        <ul class="styled-list" style="margin-top: 12px;">
+            <li>Culture and values</li>
+            <li>Work-life balance</li>
+            <li>Career growth and learning</li>
+            <li>What they like most</li>
+            <li>What can be improved (shows honesty)</li>
+        </ul>
+    </div>
+
+    <!-- Month 2 deliverables -->
+    <div class="card" style="background: var(--purple-light); border: 1px solid rgba(139,92,246,0.15);">
+        <h3 style="color: var(--purple);">Month 2 Deliverables</h3>
+        <ul class="checklist">
+            <li>4 Culture Talks podcast episodes (recorded + published)</li>
+            <li>Social Media Toolkit for employees</li>
+            <li>3&ndash;5 Glassdoor reviews</li>
+            <li>First employee posts on LinkedIn</li>
+            <li>Internal communication about HR brand</li>
+        </ul>
+    </div>
+</section>
+
+<!-- ═══════════════ MONTH 3 ═══════════════ -->
+<section class="section" id="s3">
+    <div class="section-header">
+        <div class="section-icon orange">03</div>
+        <div>
+            <div class="section-title">Month 3: Vacancies & Scale</div>
+            <div class="section-subtitle">Rewrite vacancies, Talent Pool, external publications</div>
+        </div>
+    </div>
+
+    <div class="highlight-box month3">
+        <h3>Goal of the Month</h3>
+        <div class="tagline">Rewrite all vacancies + go external</div>
+        <p>Vacancies with the new EVP, Talent Pool formation, first external publications, metrics collection. Turning the foundation into a working machine.</p>
+    </div>
+
+    <!-- Vacancy rewrite -->
+    <div class="card">
+        <h3>3.1 Rewrite All Vacancies</h3>
+        <p style="margin-bottom: 16px;">Every vacancy must communicate the cultural code and EVP, not just be a dry list of requirements.</p>
+
+        <table class="channel-table">
+            <thead>
+                <tr>
+                    <th>Element</th>
+                    <th>Before</th>
+                    <th>After</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Title</strong></td>
+                    <td>Account Executive</td>
+                    <td>Account Executive &mdash; Build the Korean Market from Scratch</td>
+                </tr>
+                <tr>
+                    <td><strong>Introduction</strong></td>
+                    <td>We are looking for...</td>
+                    <td>Story: why this role matters, what impact, what you&rsquo;ll build</td>
+                </tr>
+                <tr>
+                    <td><strong>About Us</strong></td>
+                    <td>Alconost is a localization...</td>
+                    <td>Culture block: teal, remote, 120+ languages, real employee quotes</td>
+                </tr>
+                <tr>
+                    <td><strong>Requirements</strong></td>
+                    <td>3+ years experience...</td>
+                    <td>Mindset + skills. &ldquo;You&rsquo;re a fit if...&rdquo;</td>
+                </tr>
+                <tr>
+                    <td><strong>Closing</strong></td>
+                    <td>Send CV to...</td>
+                    <td>CTA with value proposition: &ldquo;Ready to build a market? Here&rsquo;s how the process works...&rdquo;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Talent Pool -->
+    <div class="card">
+        <h3>3.2 Talent Pool</h3>
+        <p style="margin-bottom: 16px;">Building a database of potential candidates for the future:</p>
+        <div class="pillars-grid">
+            <div class="pillar-card c2">
+                <h4>Sources</h4>
+                <ul>
+                    <li>Strong candidates who didn&rsquo;t pass selection</li>
+                    <li>Content subscribers</li>
+                    <li>Podcast/event participants</li>
+                    <li>Employee referrals</li>
+                </ul>
+            </div>
+            <div class="pillar-card c5">
+                <h4>How to Manage</h4>
+                <ul>
+                    <li>Regular newsletter (monthly)</li>
+                    <li>Early access to new vacancies</li>
+                    <li>Event invitations</li>
+                    <li>CRM or Notion database</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- External publications -->
+    <div class="card">
+        <h3>3.3 External Publications</h3>
+        <p style="margin-bottom: 16px;">First publications on external platforms to build employer brand visibility. Each article doubles as a cultural filter &mdash; attracting the right candidates through real stories, not slogans.</p>
+
+        <div class="three-grid" style="margin-bottom: 24px;">
+            <div class="pillar-card c1" style="grid-column: auto;">
+                <h4>Platforms</h4>
+                <ul>
+                    <li>LinkedIn (CEO articles)</li>
+                    <li>Medium / company blog</li>
+                    <li>Industry publications</li>
+                    <li>HR media</li>
+                </ul>
+            </div>
+            <div class="pillar-card c4" style="grid-column: auto;">
+                <h4>Topics</h4>
+                <ul>
+                    <li>How a teal org works</li>
+                    <li>Remote-first: our experience</li>
+                    <li>Localization as an industry</li>
+                    <li>Alconost cultural code</li>
+                </ul>
+            </div>
+            <div class="pillar-card c3" style="grid-column: auto;">
+                <h4>Formats</h4>
+                <ul>
+                    <li>CEO article (ghostwriting)</li>
+                    <li>Case study</li>
+                    <li>Interview</li>
+                    <li>Guest post</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 10 Article Ideas -->
+    <div class="card" style="background: var(--primary-light); border: 1px solid rgba(45,91,255,0.12);">
+        <h3 style="color: var(--primary);">10 High-Impact Article Ideas</h3>
+        <p style="margin-bottom: 8px;">Each article is designed to attract the right candidates by showing how we actually work. Every piece doubles as a cultural filter.</p>
+    </div>
+
+    <div class="pillars-grid">
+        <!-- Article 1 -->
+        <div class="card">
+            <p style="font-size: 12px; font-weight: 700; color: var(--primary); letter-spacing: 1px; margin-bottom: 8px;">ARTICLE 1</p>
+            <h3>&ldquo;How We Manage 1,000+ Freelance Linguists Remotely (Without Losing Our Minds)&rdquo;</h3>
+            <p style="margin-bottom: 8px;"><strong>Author:</strong> Head of Vendor Management</p>
+            <p style="margin-bottom: 12px;"><strong>Problem:</strong> Managing 1,000+ freelancers across time zones with no office, no traditional KPIs, and complete autonomy &mdash; how does this even work?</p>
+            <div class="quote-block" style="margin: 0;">
+                <p style="font-size: 14px;">Cultural Message: We hire self-organized people who don&rsquo;t fear chaos, can build their own processes, and don&rsquo;t wait for hand-holding.</p>
+            </div>
+        </div>
+
+        <!-- Article 2 -->
+        <div class="card">
+            <p style="font-size: 12px; font-weight: 700; color: var(--primary); letter-spacing: 1px; margin-bottom: 8px;">ARTICLE 2</p>
+            <h3>&ldquo;We Don&rsquo;t Use KPIs for Project Managers (And Our Clients Are Still Happy)&rdquo;</h3>
+            <p style="margin-bottom: 8px;"><strong>Author:</strong> Head of Project Management</p>
+            <p style="margin-bottom: 12px;"><strong>Problem:</strong> How do you ensure quality and client satisfaction without rigid KPIs, dashboards, or micromanagement metrics?</p>
+            <div class="quote-block" style="margin: 0;">
+                <p style="font-size: 14px;">Cultural Message: We give freedom but expect ownership. If you need strict KPIs and control, this isn&rsquo;t for you.</p>
+            </div>
+        </div>
+
+        <!-- Article 3 -->
+        <div class="card">
+            <p style="font-size: 12px; font-weight: 700; color: var(--primary); letter-spacing: 1px; margin-bottom: 8px;">ARTICLE 3</p>
+            <h3>&ldquo;Stagility: How We Balance Startup Speed with Corporate Stability&rdquo;</h3>
+            <p style="margin-bottom: 8px;"><strong>Author:</strong> CEO or COO / Head of Operations</p>
+            <p style="margin-bottom: 12px;"><strong>Problem:</strong> Startups = chaos, corporations = stagnation. How do you find the balance in a remote team?</p>
+            <div class="quote-block" style="margin: 0;">
+                <p style="font-size: 14px;">Cultural Message: We&rsquo;re not for people who want complete certainty or constant adrenaline. We&rsquo;re for those who can work in the grey zone.</p>
+            </div>
+        </div>
+
+        <!-- Article 4 -->
+        <div class="card">
+            <p style="font-size: 12px; font-weight: 700; color: var(--primary); letter-spacing: 1px; margin-bottom: 8px;">ARTICLE 4</p>
+            <h3>&ldquo;Building an 83-Person Team Across [X] Countries Without an Office: What We Learned&rdquo;</h3>
+            <p style="margin-bottom: 8px;"><strong>Author:</strong> CEO or Head of People</p>
+            <p style="margin-bottom: 12px;"><strong>Problem:</strong> How do you build and maintain culture, communication, and connection when your team has never been in the same room?</p>
+            <div class="quote-block" style="margin: 0;">
+                <p style="font-size: 14px;">Cultural Message: We hire people who can build their own connections, don&rsquo;t wait for top-down initiatives, and thrive in autonomy.</p>
+            </div>
+        </div>
+
+        <!-- Article 5 -->
+        <div class="card">
+            <p style="font-size: 12px; font-weight: 700; color: var(--primary); letter-spacing: 1px; margin-bottom: 8px;">ARTICLE 5</p>
+            <h3>&ldquo;When Everything Went Wrong: How Our Team Saved a Project Without Escalating Up&rdquo;</h3>
+            <p style="margin-bottom: 8px;"><strong>Author:</strong> Senior PM or Team Lead</p>
+            <p style="margin-bottom: 12px;"><strong>Problem:</strong> Major client, tight deadline, 3 freelancers drop out last minute &mdash; classic disaster scenario.</p>
+            <div class="quote-block" style="margin: 0;">
+                <p style="font-size: 14px;">Cultural Message: We hire people who take ownership and don&rsquo;t wait for someone else to solve problems for them.</p>
+            </div>
+        </div>
+
+        <!-- Article 6 -->
+        <div class="card">
+            <p style="font-size: 12px; font-weight: 700; color: var(--primary); letter-spacing: 1px; margin-bottom: 8px;">ARTICLE 6</p>
+            <h3>&ldquo;How We Onboard Freelancers in 48 Hours (With No Hand-Holding)&rdquo;</h3>
+            <p style="margin-bottom: 8px;"><strong>Author:</strong> Head of Vendor Management</p>
+            <p style="margin-bottom: 12px;"><strong>Problem:</strong> How do you get freelancers productive fast in a remote, autonomous environment without micromanaging their first weeks?</p>
+            <div class="quote-block" style="margin: 0;">
+                <p style="font-size: 14px;">Cultural Message: We hire people who hit the ground running &mdash; proactive, self-sufficient, and don&rsquo;t need constant guidance.</p>
+            </div>
+        </div>
+
+        <!-- Article 7 -->
+        <div class="card">
+            <p style="font-size: 12px; font-weight: 700; color: var(--primary); letter-spacing: 1px; margin-bottom: 8px;">ARTICLE 7</p>
+            <h3>&ldquo;Why We Choose Long-Term Relationships Over Fast Hires (Even When It Hurts)&rdquo;</h3>
+            <p style="margin-bottom: 8px;"><strong>Author:</strong> CEO or Head of People</p>
+            <p style="margin-bottom: 12px;"><strong>Problem:</strong> In a fast-paced industry, why do we sometimes leave positions open for months instead of just hiring someone &ldquo;good enough&rdquo;?</p>
+            <div class="quote-block" style="margin: 0;">
+                <p style="font-size: 14px;">Cultural Message: We&rsquo;re building for the long term, not just filling seats. We&rsquo;d rather wait for the right person than compromise on culture.</p>
+            </div>
+        </div>
+
+        <!-- Article 8 -->
+        <div class="card">
+            <p style="font-size: 12px; font-weight: 700; color: var(--primary); letter-spacing: 1px; margin-bottom: 8px;">ARTICLE 8</p>
+            <h3>&ldquo;What Happens When You Give Remote Teams Full Autonomy (A 3-Year Experiment)&rdquo;</h3>
+            <p style="margin-bottom: 8px;"><strong>Author:</strong> CEO or Head of Operations</p>
+            <p style="margin-bottom: 12px;"><strong>Problem:</strong> What actually happens when you remove traditional management controls in a remote company? Does it work or fall apart?</p>
+            <div class="quote-block" style="margin: 0;">
+                <p style="font-size: 14px;">Cultural Message: Autonomy works when you hire adults who want ownership. If you need to be managed, we&rsquo;re not a fit.</p>
+            </div>
+        </div>
+
+        <!-- Article 9 -->
+        <div class="card">
+            <p style="font-size: 12px; font-weight: 700; color: var(--primary); letter-spacing: 1px; margin-bottom: 8px;">ARTICLE 9</p>
+            <h3>&ldquo;How to Build Processes That Don&rsquo;t Kill Flexibility (Lessons from Managing Localization at Scale)&rdquo;</h3>
+            <p style="margin-bottom: 8px;"><strong>Author:</strong> Head of Operations / Senior PM</p>
+            <p style="margin-bottom: 12px;"><strong>Problem:</strong> How do you scale processes without turning into a bureaucratic nightmare that slows everything down?</p>
+            <div class="quote-block" style="margin: 0;">
+                <p style="font-size: 14px;">Cultural Message: We build processes to enable people, not control them. We trust our team to know when to follow the process and when to break it.</p>
+            </div>
+        </div>
+
+        <!-- Article 10 -->
+        <div class="card">
+            <p style="font-size: 12px; font-weight: 700; color: var(--primary); letter-spacing: 1px; margin-bottom: 8px;">ARTICLE 10</p>
+            <h3>&ldquo;The Real Cost of Remote Work (That Nobody Talks About)&rdquo;</h3>
+            <p style="margin-bottom: 8px;"><strong>Author:</strong> CEO or Head of People</p>
+            <p style="margin-bottom: 12px;"><strong>Problem:</strong> Everyone talks about remote work benefits, but what are the real challenges and costs that companies don&rsquo;t prepare for?</p>
+            <div class="quote-block" style="margin: 0;">
+                <p style="font-size: 14px;">Cultural Message: Remote work isn&rsquo;t for everyone &mdash; it requires self-discipline, proactivity, and comfort with isolation. We&rsquo;re honest about this.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Metrics collection -->
+    <div class="card">
+        <h3>3.4 Metrics Collection</h3>
+        <p style="margin-bottom: 16px;">Measuring baseline indicators to evaluate strategy effectiveness:</p>
+
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-value blue">T2H</div>
+                <div class="metric-label">Time-to-Hire</div>
+                <div class="metric-sub">Time to close a vacancy</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value purple">CPA</div>
+                <div class="metric-label">Cost-per-Application</div>
+                <div class="metric-sub">Acquisition cost</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value green">QoA</div>
+                <div class="metric-label">Quality of Applicants</div>
+                <div class="metric-sub">% of qualified candidates</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value orange">eNPS</div>
+                <div class="metric-label">Employee NPS</div>
+                <div class="metric-sub">Internal loyalty score</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value teal">ER</div>
+                <div class="metric-label">Engagement Rate</div>
+                <div class="metric-sub">Content engagement</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value rose">GD</div>
+                <div class="metric-label">Glassdoor Rating</div>
+                <div class="metric-sub">Platform rating</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Month 3 deliverables -->
+    <div class="card" style="background: var(--accent-light); border: 1px solid rgba(255,107,53,0.15);">
+        <h3 style="color: var(--accent);">Month 3 Deliverables</h3>
+        <ul class="checklist">
+            <li>All vacancies rewritten with EVP and cultural code</li>
+            <li>Talent Pool: database + management process</li>
+            <li>2&ndash;3 external publications</li>
+            <li>Metrics dashboard (baseline)</li>
+            <li>3-month report with recommendations</li>
+        </ul>
+    </div>
+</section>
+
+<!-- ═══════════════ WEEKLY ROUTINE ═══════════════ -->
+<section class="section" id="s4">
+    <div class="section-header">
+        <div class="section-icon teal">04</div>
+        <div>
+            <div class="section-title">Weekly Routine</div>
+            <div class="section-subtitle">10 hours per week &mdash; time allocation</div>
+        </div>
+    </div>
+
+    <div class="routine-grid">
+        <div class="routine-item">
+            <div class="routine-hours">3<span>hours</span></div>
+            <div class="routine-desc">Content: writing, editing, preparing posts and materials</div>
+        </div>
+        <div class="routine-item">
+            <div class="routine-hours">2<span>hours</span></div>
+            <div class="routine-desc">Interviews and employee communication, podcast recording</div>
+        </div>
+        <div class="routine-item">
+            <div class="routine-hours">2<span>hours</span></div>
+            <div class="routine-desc">Strategy and planning: analysis, metrics, adjustments</div>
+        </div>
+        <div class="routine-item">
+            <div class="routine-hours">2<span>hours</span></div>
+            <div class="routine-desc">Platforms: publishing, monitoring, responding to comments</div>
+        </div>
+        <div class="routine-item" style="grid-column: 1 / -1;">
+            <div class="routine-hours">1<span>hour</span></div>
+            <div class="routine-desc">Administration: updating documents, Talent Pool, reporting</div>
+        </div>
+    </div>
+
+    <div class="quote-block" style="margin-top: 16px;">
+        <p>10 hours per week &mdash; a realistic time budget. The key is consistency and regularity, not one-off heroics.</p>
+    </div>
+</section>
+
+<!-- ═══════════════ EXPECTED RESULTS ═══════════════ -->
+<section class="section" id="s5">
+    <div class="section-header">
+        <div class="section-icon rose">05</div>
+        <div>
+            <div class="section-title">Expected Results</div>
+            <div class="section-subtitle">What we&rsquo;ll achieve in 3 months</div>
+        </div>
+    </div>
+
+    <div class="pillars-grid">
+        <div class="pillar-card c1">
+            <h4>Internal Results</h4>
+            <ul>
+                <li>Cultural Code &mdash; documented</li>
+                <li>EVP &mdash; approved formulations</li>
+                <li>Story Bank: 15+ stories</li>
+                <li>4 podcast episodes</li>
+                <li>Social Media Toolkit</li>
+                <li>Rewritten vacancies</li>
+            </ul>
+        </div>
+        <div class="pillar-card c2">
+            <h4>External Results</h4>
+            <ul>
+                <li>Glassdoor: 3&ndash;5 reviews</li>
+                <li>LinkedIn: regular content</li>
+                <li>2&ndash;3 external publications</li>
+                <li>Talent Pool: first database</li>
+                <li>Brand recognition in the market</li>
+                <li>Metrics: baseline established</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card" style="margin-top: 16px;">
+        <h3>Key Metrics (3-month targets)</h3>
+        <div class="metrics-grid" style="margin-top: 16px;">
+            <div class="metric-card">
+                <div class="metric-value blue">+30%</div>
+                <div class="metric-label">Inbound applications growth</div>
+                <div class="metric-sub">vs. previous quarter</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value purple">4.0+</div>
+                <div class="metric-label">Glassdoor rating</div>
+                <div class="metric-sub">Minimum target</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value green">15+</div>
+                <div class="metric-label">Stories in Story Bank</div>
+                <div class="metric-sub">Content for 6 months</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════ ROADMAP ═══════════════ -->
+<section class="section" id="s6">
+    <div class="section-header">
+        <div class="section-icon warning">06</div>
+        <div>
+            <div class="section-title">Roadmap</div>
+            <div class="section-subtitle">Month-by-month implementation plan</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="timeline">
+            <div class="timeline-item m1">
+                <div class="tl-period">Month 1 &mdash; Cultural Code</div>
+                <h4>Building the Foundation</h4>
+                <p>Deep-dive CEO interview. Candidate persona. EVP formulations. Story Bank (10+ stories). Cultural Code &mdash; final document.</p>
+            </div>
+            <div class="timeline-item m2">
+                <div class="tl-period">Month 2 &mdash; Internal Launch</div>
+                <h4>Culture Talks + Social Media</h4>
+                <p>4 podcast episodes. Social Media Toolkit for employees. First LinkedIn posts. 3&ndash;5 Glassdoor reviews. Internal communication.</p>
+            </div>
+            <div class="timeline-item m3">
+                <div class="tl-period">Month 3 &mdash; Scaling</div>
+                <h4>Vacancies + External Content</h4>
+                <p>Rewrite all vacancies with EVP. Talent Pool. 2&ndash;3 external publications. Metrics measurement. Report with recommendations for next quarter.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════ WHAT'S NEXT ═══════════════ -->
+<section class="section" id="s7">
+    <div class="section-header">
+        <div class="section-icon blue">07</div>
+        <div>
+            <div class="section-title">What&rsquo;s Next</div>
+            <div class="section-subtitle">After the first 3 months</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>Growth Directions (Months 4&ndash;6+)</h3>
+        <div class="three-grid" style="margin-top: 16px;">
+            <div class="pillar-card c1" style="grid-column: auto;">
+                <h4>Careers Page</h4>
+                <p>A full careers website with EVP, stories, video, and cultural code</p>
+            </div>
+            <div class="pillar-card c4" style="grid-column: auto;">
+                <h4>Video Content</h4>
+                <p>&ldquo;Day in the life&rdquo;, culture videos, short Reels/Shorts from the podcast</p>
+            </div>
+            <div class="pillar-card c3" style="grid-column: auto;">
+                <h4>Employee Advocacy</h4>
+                <p>Ambassador program, referral bonus, scaling the Toolkit</p>
+            </div>
+        </div>
+        <div class="three-grid" style="margin-top: 16px;">
+            <div class="pillar-card c5" style="grid-column: auto;">
+                <h4>Events & Networking</h4>
+                <p>HR/tech conference participation, webinars, community partnerships</p>
+            </div>
+            <div class="pillar-card c6" style="grid-column: auto;">
+                <h4>Brand Localization</h4>
+                <p>Adapting the HR brand for specific markets (Korea, LatAm, etc.)</p>
+            </div>
+            <div class="pillar-card c2" style="grid-column: auto;">
+                <h4>Analytics & Optimization</h4>
+                <p>A/B testing vacancies, hiring funnel, candidate experience survey</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="quote-block" style="margin-top: 16px;">
+        <p>The first 3 months are the foundation. After that &mdash; scaling what works and experimenting with new formats.</p>
+    </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<div class="footer">
+    <p><strong>Alconost &mdash; HR Brand Strategy: 3-Month Roadmap</strong></p>
+    <p style="margin-top: 4px;">Confidential &mdash; For internal use only</p>
+    <p style="margin-top: 4px;">People & Culture &bull; January 2026</p>
+</div>
+
+</div>
+</body>
+</html>
